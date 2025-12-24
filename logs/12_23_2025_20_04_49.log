@@ -1,0 +1,8 @@
+[ 2025-12-23 20:04:49,662 ] 63 HotelProject - INFO - --- LightGBM tuning boshlandi ---
+[ 2025-12-23 20:07:45,612 ] 70 HotelProject - INFO - LightGBM yakuniy natija (F1): 0.8293
+[ 2025-12-23 20:07:45,612 ] 63 HotelProject - INFO - --- XGBoost tuning boshlandi ---
+[ 2025-12-23 20:10:13,408 ] 70 HotelProject - INFO - XGBoost yakuniy natija (F1): 0.8313
+[ 2025-12-23 20:10:13,409 ] 63 HotelProject - INFO - --- Random_Forest tuning boshlandi ---
+[ 2025-12-23 20:15:09,876 ] 70 HotelProject - INFO - Random_Forest yakuniy natija (F1): 0.8197
+[ 2025-12-23 20:15:09,876 ] 63 HotelProject - INFO - --- Logistic_Regression tuning boshlandi ---
+[ 2025-12-23 20:17:08,792 ] 70 HotelProject - INFO - Logistic_Regression yakuniy natija (F1): 0.7191

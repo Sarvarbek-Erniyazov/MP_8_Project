@@ -1,0 +1,19 @@
+{
+    "LightGBM": {
+        "n_estimators": 776,
+        "learning_rate": 0.15362039775824315,
+        "max_depth": 12
+    },
+    "XGBoost": {
+        "n_estimators": 427,
+        "learning_rate": 0.07308101220550917,
+        "max_depth": 11
+    },
+    "Random_Forest": {
+        "n_estimators": 290,
+        "max_depth": 20
+    },
+    "Logistic_Regression": {
+        "C": 0.3090415957268515
+    }
+}

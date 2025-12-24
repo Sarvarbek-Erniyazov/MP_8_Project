@@ -1,0 +1,20 @@
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Data (Katta hajmli datasetlar)
+data/raw/*.csv
+data/engineered/*.csv
+
+# Models
+models/*.pkl
+
+# Notebooks
+.ipynb_checkpoints/

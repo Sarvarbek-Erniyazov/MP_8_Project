@@ -1,0 +1,23 @@
+[ 2025-12-23 20:33:57,739 ] 12 HotelProject - INFO - Loyiha 'Ensemble Stacking Pipeline' bosqichiga o'tdi.
+[ 2025-12-23 20:33:57,906 ] 8 HotelProject - INFO - --- FEATURE ENGINEERING BOSHLANDI ---
+[ 2025-12-23 20:33:57,930 ] 23 HotelProject - INFO - Yangi mantiqiy ustunlar (FE_) muvaffaqiyatli qo'shildi.
+[ 2025-12-23 20:33:58,517 ] 30 HotelProject - INFO - Engineered CSV saqlandi: data/engineered\engineered_data.csv
+[ 2025-12-23 20:33:58,517 ] 17 HotelProject - INFO - --- ILMIY ASOSLANGAN PREPROCESSING (V2) BOSHLANDI ---
+[ 2025-12-23 20:42:20,873 ] 64 HotelProject - INFO - Feature Selection: Top 35 ta ustun tanlanmoqda (Deposit turlarini qamrab olish uchun).
+[ 2025-12-23 20:43:01,524 ] 88 HotelProject - INFO - YAKUN: Preprocessing tugadi. 35 ta ustun saqlandi.
+[ 2025-12-23 20:43:01,536 ] 26 HotelProject - INFO - --- STACKING ENSEMBLE TRAINING BOSHLANDI ---
+[ 2025-12-23 20:43:01,542 ] 17 HotelProject - INFO - Stacking uchun bazaviy modellar yuklanmoqda...
+[ 2025-12-23 20:43:01,542 ] 37 HotelProject - INFO - Stacking Ensemble arxitekturasi yaratildi.
+[ 2025-12-23 20:43:53,288 ] 39 HotelProject - INFO - Stacking model saqlandi: models\best_hotel_model.pkl
+[ 2025-12-23 20:43:53,288 ] 11 HotelProject - INFO - --- MODELNI BAHOLASH (EVALUATION) BOSHLANDI ---
+[ 2025-12-23 20:43:56,546 ] 31 HotelProject - INFO - Test Set F1-Score: 0.8469
+[ 2025-12-23 20:43:56,546 ] 32 HotelProject - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.93      0.91     14907
+           1       0.88      0.82      0.85      8971
+
+    accuracy                           0.89     23878
+   macro avg       0.89      0.87      0.88     23878
+weighted avg       0.89      0.89      0.89     23878
+
