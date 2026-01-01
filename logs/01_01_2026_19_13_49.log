@@ -1,0 +1,5 @@
+[ 2026-01-01 19:13:55,687 ] 12 HotelProject - INFO - Loyiha 'Ensemble Stacking Pipeline' bosqichiga o'tdi.
+[ 2026-01-01 19:13:55,867 ] 8 HotelProject - INFO - --- FEATURE ENGINEERING BOSHLANDI ---
+[ 2026-01-01 19:13:55,892 ] 23 HotelProject - INFO - Yangi mantiqiy ustunlar (FE_) muvaffaqiyatli qo'shildi.
+[ 2026-01-01 19:13:56,496 ] 30 HotelProject - INFO - Engineered CSV saqlandi: data/engineered\engineered_data.csv
+[ 2026-01-01 19:13:56,496 ] 17 HotelProject - INFO - --- ILMIY ASOSLANGAN PREPROCESSING (V2) BOSHLANDI ---
