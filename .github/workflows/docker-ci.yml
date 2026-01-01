@@ -9,47 +9,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Kodingizni yuklab olish
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Docker Buildx sozlash
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      # 3️⃣ Docker Hub-ga kirish
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # 4️⃣ Docker imijini qurish va push qilish
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           file: Dockerfile
           push: true
-          # BU YERDA MALIKOV... O'RNIGA ${{ secrets.DOCKERHUB_USERNAME }} ISHLATAMIZ
-          # Shunda avtomatik sizning loginizni qo'yib ketadi
+          # Bu yerda dinamik secrets ishlatilgan, shuning uchun shargun1303 deb qo'lda yozish shart emas
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/hotel-api-aws:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/hotel-api-aws:${{ github.sha }}
 
-      # 5️⃣ Test qilish uchun konteynerni vaqtincha yoqish
       - name: Run container for testing
         run: |
           docker run -d --name test-container -p 8000:8000 \
             ${{ secrets.DOCKERHUB_USERNAME }}/hotel-api-aws:latest
-          sleep 25
+          sleep 20
 
-      # 6️⃣ API ishlayotganini tekshirish (Health check)
       - name: Health check
         run: |
           curl -f http://localhost:8000/docs || (docker logs test-container && exit 1)
 
-      # 7️⃣ Tozalash
       - name: Cleanup
         if: always()
         run: docker rm -f test-container || true
